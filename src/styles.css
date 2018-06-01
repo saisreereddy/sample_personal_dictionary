@@ -1,0 +1,262 @@
+/* You can add global styles to this file, and also import other style files */
+.api_style{
+    text-decoration: none;
+    color: crimson;
+}
+.form-control-custom{
+display: block;
+width: 26%;
+margin:0 auto;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.card{
+    margin-left:2vw;
+    margin-bottom: 2vh;
+    
+}
+.red{
+    border:2px solid indianred;
+}
+.green{
+    border:2px solid chartreuse;
+}
+.blue{
+    border:2px solid lightblue;
+}
+.well_style{
+    width:50%;
+    margin:0 auto;
+    margin-top: 0.5vh !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filter-wrapper,
+.keyword-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.filter-wrapper {
+  min-height: 100%;
+  flex-flow: column wrap;;
+  position: relative
+}
+.keyword-wrapper {
+  width: 100%;
+  position: relative;
+}
+#keyword {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font: 1.5em 'Arimo', sans-serif;
+  width: 40%;
+  outline: none;
+  transition: border 0.5s ease-in-out
+}
+#keyword:focus {
+  border-color : rgba(81, 203, 238, 1);;
+}
+#keyword-button {
+  position: absolute;
+  right: 26%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.7em;
+  color: #8DB9ED
+}
+#keyword-button:hover {
+  color: #ccc
+}
+.filter-select {
+  width: 44%;
+  list-style: none;
+  font-size: 1.1em;
+  color: rgb(105, 105, 105);
+  border: 1px solid #ccc;
+  border-top: none;
+  /*so things don't jump around*/
+  position: absolute;
+  left: 28%;
+  top: calc(50% + 25px);
+  overflow-y: auto;
+  text-align: left;
+  background: #fff;
+  padding-left: 1vw;
+}
+.filter-select-list img {
+  margin-right: 30px;
+}
+.tags {
+  font-size: 12px;
+  font-style: italic;
+  color: #c6c6c6;
+  margin-right: 10px;
+  position: relative;
+  top: -10px;
+}
+.filter-select-list:hover .tags {
+  color: #fff;
+}
+.filter-select-list {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 1vh;
+}
+.artist-name {
+  display: inline-block;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+}
+.filter-select-list:hover {
+  background:  #C0C0C0;
+  color: #fff
+}
+.list-highlight,
+.list-highlight:hover {
+  background: rgb(55, 55, 55);
+  color: #fff
+}
+@media only screen and (max-width: 768px) {
+  .filter-select,
+  #keyword {
+    width: 80%;
+  }
+  #keyword {
+    font-size: 1.3em
+  }
+  .filter-select {
+    font-size: 0.9em;
+    left: 10%;
+    top: calc(50% + 23px);
+  }
+  #keyword-button {
+    right: 11%
+  }
+}
+@media only screen and (max-width: 480px) {
+  .filter-select,
+  #keyword {
+    width: 95%;
+  }
+  .filter-select {
+    left: 2.5%;
+  }
+  #keyword-button {
+    right: 3.5%
+  }
+}
+input[type="submit"] {
+  margin-left: -50px;
+  height: 25px;
+  width: 50px;
+  color: white;
+  border: 0;
+  -webkit-appearance: none;
+  position :absolute;
+  z-index: 100;
+   background: url('/assets/Images/search.png');
+}
+
+.right-addon .glyphicon { right: 0px;}
+.right-addon input { padding-right: 30px; }
+
+.keyword-wrapper button {
+  float: left;
+  width: 4%;
+  padding: 10px;
+  background: white;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.keyword-wrapper button:hover {
+  background: #0b7dda;
+}
+
+.keyword-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.border_bottom{
+
+  width:80%;
+  text-align: left;
+}
+.img1_style{
+
+  height: 11rem !important;
+}
+.fa{
+  color: lightskyblue;
+}
+.myDiv .bg-img{
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .3;
+  width: 100%;
+  height: auto;
+   background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  background-image: url("http://csw.torun.pl/wp-content/uploads/2016/06/scrabble.jpg");
+}
+.myDiv {
+  position: relative;
+  z-index: 1;
+  overflow:auto;
+}
+
+.btn-default {
+  color: #333;
+  background-color: transparent;
+  border-color: black;
+  border-radius: 2vw;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: transparent;
+  border-color: black;
+  border-radius: 2vw;
+}
+.img2_style{
+  height: 8rem !important; 
+}

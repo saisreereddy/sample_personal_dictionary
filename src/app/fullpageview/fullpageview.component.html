@@ -1,0 +1,194 @@
+<div class="myDiv">
+
+<div class="bg-img"></div>
+  <div *ngFor="let result of results">
+    <div class="col-md-10 col-md-offset-2 border_bottom" style="padding-bottom:2vh;display:inline-block;font-size:18px;text-align:left">Definition of <span style="font-variant-caps:all-petite-caps;">{{result.word}}</span> in English</div>
+  <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+    <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;font-variant-caps:all-petite-caps;">  {{result.word}} </span>
+    </div>
+  </div>
+
+  <div *ngFor="let result of results">
+    <div *ngFor="let each of result.lexicalEntries">
+      
+      <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+        <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+      </div>
+
+<div *ngFor="let entries of each.entries">
+<div *ngFor="let senses of entries.senses; let rowIndex=index">
+    <div *ngIf="senses.definitions">
+    <div class="col-md-10 col-md-offset-2 border_bottom" >
+<span style="color: #27a058;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> def:</span>        <span style="color: #27a058;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> {{senses.definitions}} </span>
+      </div>
+    </div>
+    <div *ngFor="let examples of senses.examples">
+        <div class="col-md-10 col-md-offset-2 border_bottom" >
+            <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>        <span style="padding-bottom:2vh;display:inline-block;font-size:18px"> ' {{examples.text}} ' </span>
+          </div>
+    </div>
+    
+    
+    
+    
+    </div>
+</div>
+
+
+
+
+      </div>
+      <div style="display:inline-block;text-align:left;margin-bottom:2vh;" class="col-md-10 col-md-offset-2">
+          <button type="button" class="btn btn-default" (click)="MoreSentences(result.word)">
+              <span class="glyphicon glyphicon-plus" id ="myId" #myId></span>More Example Sentences
+              
+            </button>
+      </div>
+      <div *ngIf="showMore">
+      <div *ngFor="let results of dictDataSentencesResults">
+          <div *ngFor="let each of results.lexicalEntries">
+          <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+              <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+              </div>
+              <div *ngFor="let sentences of each.sentences">
+                  <div class="col-md-10 col-md-offset-2 border_bottom">
+                      <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>          <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> ' {{sentences.text}} '</span>
+                      </div>
+                </div>
+      
+              </div>
+      </div>
+ </div>
+
+      
+
+      <div style="display:inline-block;text-align:left;margin-bottom:2vh;" class="col-md-10 col-md-offset-2">
+          <button type="button" class="btn btn-default" (click)="synonyms(result.word)">
+              <span class="glyphicon glyphicon-plus"></span>Synonyms
+            </button>
+      </div>
+      <div *ngIf="showMore">
+      <div *ngFor="let results of dictDataSynonymsResults">
+      
+      
+        <div *ngFor="let each of results.lexicalEntries">
+      
+            <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+                <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#f15a24;text-transform:uppercase;letter-spacing:0.8px;">  {{each.lexicalCategory}} </span>
+                </div>
+      
+      
+                <div *ngFor="let entries of each.entries">
+      
+      <div *ngFor="let senses of entries.senses;let rowIndex=index">
+      
+      
+        <div *ngFor="let examples of senses.examples ">
+      
+      
+            <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+                <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> {{rowIndex+1}}:' {{examples.text}} '</span>
+                </div>
+                <div class="col-md-10 col-md-offset-2" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">SYNONYMS</div>
+      <div *ngFor="let synonyms of senses.synonyms">
+      
+   
+
+          <div class="col-md-10 col-md-offset-2 border_bottom">
+              <span style="padding-bottom:2vh;display:inline-block;font-size:18px;color:darkgreen">  {{synonyms.text}} </span>
+              </div>  
+           
+    
+      
+      
+      </div>
+          
+      
+        </div>
+      </div>
+      
+                </div>
+      
+        </div>
+      </div>
+      </div>
+      
+      <div style="display:inline-block;text-align:left;margin-bottom:2vh;" class="col-md-10 col-md-offset-2">
+          <button type="button" class="btn btn-default" (click)="antonyms(result.word)">
+              <span class="glyphicon glyphicon-plus"></span>Antonyms
+            </button>
+      </div>
+     
+      
+      
+      
+      <div *ngIf="showMore">
+      <div *ngFor="let results of dictDataAntonymsResults">
+          
+          
+            <div *ngFor="let each of results.lexicalEntries">
+          
+                <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+                    <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+                    </div>
+          
+          
+                    <div *ngFor="let entries of each.entries">
+          
+          <div *ngFor="let senses of entries.senses;let rowIndex=index">
+          
+          
+            <div *ngFor="let examples of senses.examples">
+          
+          
+                <div class="col-md-10 col-md-offset-2 border_bottom" style="border-bottom:1px solid darkgray;">
+                    <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> {{rowIndex+1}}: ' {{examples.text}} '</span>
+                    </div>
+                    <div class="col-md-10 col-md-offset-2" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">ANTONYMS</div>
+          
+          <div *ngFor="let antonyms of senses.antonyms">
+          
+          
+      
+          
+          
+              <div class="col-md-10 col-md-offset-2 border_bottom">
+                  <span style="padding-bottom:2vh;display:inline-block;font-size:18px;color:mediumvioletred;">  {{antonyms.text}} </span>
+                  </div>  
+          
+        
+          
+          </div>
+              
+          
+            </div>
+          </div>
+          
+                    </div>
+          
+            </div>
+          </div>
+   </div>
+
+      
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  
+</div>

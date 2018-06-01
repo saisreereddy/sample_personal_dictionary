@@ -1,0 +1,64 @@
+
+  <div class="row" style="text-align:center;background-color:lightskyblue">
+    <div>
+    <!--  <input id="name" type="text" [(ngModel)]="name" (change)="getDictonaryData(name)"/>-->
+      <br><br>
+      <br/>
+    
+<!--<div *ngFor="let item of autoDictDataresults">
+{{item.word}}
+
+
+<select class="form-control-custom"  placeholder="Filter Category By">
+  <option  [ngValue]="undefined"selected >Get similar names</option>
+
+    <option *ngFor="let item of autoDictDataresults"> {{item.word}}</option>
+
+</select>-->
+
+<!--<div class="container" >
+  <div class="input-field col s12">
+
+    <input type="text" name="query"  [(ngModel)]="name" (change)="getDictonaryData(name)" id="query" placeholder="Type word or phrase" autocomplete="off" maxlength="100" autocapitalize="none" class="autocomplete active-query">
+
+  </div>
+  <div class="suggestions">
+      <ul *ngFor="let item of autoDictDataresults">
+          <li >
+              <a (click)="select(item)">{{item.word}}</a>
+          </li>
+      </ul>
+  </div>
+</div>  	-->
+
+
+
+<section class="filter-wrapper">
+    <div class="keyword-wrapper">
+   <input #textbox (keyup.enter)="methodInsideYourComponent($event)" [formControl]="queryField" type="text" id="keyword" placeholder="Type Word or Phrase" autofocus/>
+   <button type="submit" (click)="methodInsideYourComponent2(textbox.value)"><i class="fa fa-search"></i></button>
+
+  </div>
+     <ul class="filter-select">
+        <li *ngFor="let result of autoDictDataresults" class="filter-select-list" (click)="methodInsideYourComponent2(result.word)"><p class="artist-name">
+          {{result.word}}</p></li>
+
+      </ul>
+   </section>
+
+
+
+  
+
+
+<!--   <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+</ngx-slick>-->
+
+  </div>
+
+
+</div>
+

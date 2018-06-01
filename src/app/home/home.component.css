@@ -1,0 +1,14 @@
+.card{
+    margin-left:2vw;
+    margin-bottom: 2vh;
+    
+}
+.red{
+    border:2px solid indianred;
+}
+.green{
+    border:2px solid chartreuse;
+}
+.blue{
+    border:2px solid lightblue;
+}
