@@ -97,7 +97,7 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   color: #ccc
 }
 .filter-select {
-  width: 44%;
+  width: 43%;
   list-style: none;
   font-size: 1.1em;
   color: rgb(105, 105, 105);
@@ -105,7 +105,7 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   border-top: none;
   /*so things don't jump around*/
   position: absolute;
-  left: 28%;
+  left: 28.5%;
   top: calc(50% + 25px);
   overflow-y: auto;
   text-align: left;
@@ -147,6 +147,18 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   color: #fff
 }
 @media only screen and (max-width: 768px) {
+  .keyword-wrapper button{
+    width:11% !important;
+      }
+  .img2_style {
+    height: 6rem !important;
+}
+.font-small{
+  font-size: 16px !important;
+}
+.img1_style_main {
+  height: 6rem !important;
+}
   .filter-select,
   #keyword {
     width: 80%;
@@ -156,7 +168,7 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   }
   .filter-select {
     font-size: 0.9em;
-    left: 10%;
+    left: 8%;
     top: calc(50% + 23px);
   }
   #keyword-button {
@@ -164,16 +176,29 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   }
 }
 @media only screen and (max-width: 480px) {
+  .keyword-wrapper button{
+    width:11% !important;
+      }
+      .img2_style {
+        height: 3rem !important;
+    }
+    .font-small{
+      font-size: 16px !important;
+    }
+    .img1_style_main {
+      height: 4rem !important;
+  }
   .filter-select,
   #keyword {
-    width: 95%;
+    width: 78%;
   }
   .filter-select {
-    left: 2.5%;
+    left: 8.5%;
   }
   #keyword-button {
     right: 3.5%
   }
+
 }
 input[type="submit"] {
   margin-left: -50px;
@@ -216,9 +241,9 @@ input[type="submit"] {
   width:80%;
   text-align: left;
 }
-.img1_style{
+.img1_style_main{
 
-  height: 11rem !important;
+  height: 11rem;
 }
 .fa{
   color: lightskyblue;
@@ -258,5 +283,8 @@ input[type="submit"] {
   border-radius: 2vw;
 }
 .img2_style{
-  height: 8rem !important; 
+  height: 8rem; 
+}
+.flex-container {
+  display: flex;
 }

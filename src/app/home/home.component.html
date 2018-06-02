@@ -34,7 +34,7 @@
 
 
 <section class="filter-wrapper">
-    <div class="keyword-wrapper">
+    <div class="keyword-wrapper col-md-10 col-xs-4">
    <input #textbox (keyup.enter)="methodInsideYourComponent($event)" [formControl]="queryField" type="text" id="keyword" placeholder="Type Word or Phrase" autofocus/>
    <button type="submit" (click)="methodInsideYourComponent2(textbox.value)"><i class="fa fa-search"></i></button>
 
