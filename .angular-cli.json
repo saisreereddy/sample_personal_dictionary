@@ -21,12 +21,15 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
+        "../node_modules/font-awesome/scss/font-awesome.scss",
         "styles.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js"
         ,
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/chart.js/dist/Chart.js",
+        "../node_modules/hammerjs/hammer.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

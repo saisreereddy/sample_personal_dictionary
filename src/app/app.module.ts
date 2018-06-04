@@ -19,6 +19,10 @@ import { ErrornotfoundComponent } from './errornotfound/errornotfound.component'
 import { ErrorbadrequestComponent } from './errorbadrequest/errorbadrequest.component';
 import { ErrorauthenticationfailedComponent } from './errorauthenticationfailed/errorauthenticationfailed.component';
 import { ErrorurltoolongComponent } from './errorurltoolong/errorurltoolong.component';
+import RateLimiter from 'rxjs-ratelimiter';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import {MDBBootstrapModule , CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import 'hammerjs';
 
 
 @NgModule({
@@ -40,6 +44,9 @@ import { ErrorurltoolongComponent } from './errorurltoolong/errorurltoolong.comp
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    Ng2CarouselamosModule,
+    CarouselModule,
+    WavesModule,
     ToastModule.forRoot(),
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},

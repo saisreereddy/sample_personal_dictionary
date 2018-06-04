@@ -3,9 +3,9 @@
 <div style="text-align:center">
   <div class="container-fluid container-fluid-1">
     
-    <!-- <nav class="navbar navbar-default">
+     <nav class="navbar navbar-default">
       <div class="container-fluid">
-         Brand and toggle get grouped for better mobile display
+        <!-- Brand and toggle get grouped for better mobile display-->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -16,7 +16,7 @@
           
         </div>
     
-         Collect the nav links, forms, and other content for toggling
+        <!-- Collect the nav links, forms, and other content for toggling-->
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a [routerLink]="['/home']">Home</a></li>
@@ -24,18 +24,20 @@
            
             
           </ul>
-        
+          <ul  class="nav navbar-nav navbar-right">
+              <li> <a class="btn font-weight" (click)="goBackToPreviousPage()">Go Back </a></li>
+              </ul>
         </div>
        
       </div>
-    </nav>-->
+    </nav>
 
 
     <div class="row header">
         <div class="col-md-12">
-            <a class="btn font-weight" [routerLink]="['/home']" style="float:left;"><img src="assets\Images\home.png" class="img-responsive img2_style"></a>
+            
       <span style="display:inline-block;font-size:22px;font-weight:bold;color:lightskyblue" class="font-small">Inspired By</span>    <a style="display:inline-block;vertical-align:middle;" class="title_style" [routerLink]="['/']"><img src="assets\Images\oxford.png" class="img-responsive img1_style_main"></a>
-      <a class="btn font-weight" (click)="goBackToPreviousPage()" style="float:right;"><img src="assets\Images\back.jpg" class="img-responsive img2_style"></a>
+      
     </div>
       </div>
 

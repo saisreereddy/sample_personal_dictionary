@@ -8,6 +8,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
+import RateLimiter from 'rxjs-ratelimiter';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,6 +16,7 @@ import 'rxjs/add/operator/switchMap';
   providers: []
 })
 export class HomeComponent implements OnInit {
+  items: Array<any> = []
   dictData: any;
 name: any;
 results: any;
@@ -27,6 +29,10 @@ someProperty2: any;
 queryField: FormControl = new FormControl();
   constructor(private _route: ActivatedRoute, private router: Router, private gotHttpService: GotHttpService, private toastr: ToastsManager, vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr);
+    this.items = [
+      { name: 'assets/Images/home.png' },
+      { name: 'assets/Images/home.png' },
+    ];
   }
 
   ngOnInit() {

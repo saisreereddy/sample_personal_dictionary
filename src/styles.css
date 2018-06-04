@@ -6,7 +6,8 @@
 .form-control-custom{
 display: block;
 width: 26%;
-margin:0 auto;
+padding-right: 50px;
+font-weight: bold;
 height: 34px;
 padding: 6px 12px;
 font-size: 14px;
@@ -15,6 +16,7 @@ color: #555;
 background-color: #fff;
 background-image: none;
 border: 1px solid #ccc;
+border-right: none;
 border-radius: 4px;
 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -97,20 +99,21 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   color: #ccc
 }
 .filter-select {
-  width: 43%;
+  width: 25.5%;
   list-style: none;
   font-size: 1.1em;
   color: rgb(105, 105, 105);
   border: 1px solid #ccc;
   border-top: none;
-  /*so things don't jump around*/
   position: absolute;
-  left: 28.5%;
-  top: calc(50% + 25px);
+  left: 37.3%;
+  top: calc(30% + 25px);
   overflow-y: auto;
   text-align: left;
   background: #fff;
   padding-left: 1vw;
+  border-radius: 4px;
+  overflow-x: hidden;
 }
 .filter-select-list img {
   margin-right: 30px;
@@ -137,13 +140,19 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   color: black;
   font-weight: bold;
 }
-.filter-select-list:hover {
-  background:  #C0C0C0;
-  color: #fff
+.filter-select-list .artist-name:hover {
+  background:  #e6e6e6;
+ 
+  color:black;
+}
+.filter-select-list .artist-name:hover {
+ 
+  padding-top: 0.05vh;
+  padding-bottom: 0.05vh;
+  width: 98%;  
 }
 .list-highlight,
 .list-highlight:hover {
-  background: rgb(55, 55, 55);
   color: #fff
 }
 @media only screen and (max-width: 768px) {
@@ -218,13 +227,16 @@ input[type="submit"] {
 .keyword-wrapper button {
   float: left;
   width: 4%;
-  padding: 10px;
+  margin-left: -50px;
   background: white;
   color: black;
   font-size: 17px;
-  border: 1px solid grey;
   border-left: none;
   cursor: pointer;
+  border:1px solid #ccc;
+  border-left: none;
+  border-radius: 4px;
+  background-color: lightskyblue;
 }
 
 .keyword-wrapper button:hover {
@@ -246,7 +258,7 @@ input[type="submit"] {
   height: 11rem;
 }
 .fa{
-  color: lightskyblue;
+  color:white;
 }
 .myDiv .bg-img{
 
@@ -256,13 +268,12 @@ input[type="submit"] {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .3;
   width: 100%;
   height: auto;
    background-position: center center;
     background-repeat: no-repeat; 
     background-size: cover; 
-  background-image: url("http://csw.torun.pl/wp-content/uploads/2016/06/scrabble.jpg");
+ /* background-image: url("http://2gold.info/wp-content/uploads/2018/02/shakespeare-background-powerpoint-macbeth-background-powerpoint-powerpointhintergrund-templates.gif");*/
 }
 .myDiv {
   position: relative;
@@ -287,4 +298,55 @@ input[type="submit"] {
 }
 .flex-container {
   display: flex;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightskyblue; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:lightskyblue; 
+}
+.navbar-default .navbar-nav>li>a{
+  color: deepskyblue;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a:hover{
+ color: white;
+ font-weight: bold;
+}
+.navbar-default{
+  background-color: darkblue;
+}
+#container {
+  width: 100%;
+  margin: 5em auto;
+  padding: 0;
+  background:#fff;
+}
+
+.items {
+  max-width:300px;
+  height:300px;
+  background:#ECECEC;
+}
+
+#left, #right { 
+  margin: 30px;
+}
+.custom_img{
+  width: 80%;
+  margin:0 auto;
 }
