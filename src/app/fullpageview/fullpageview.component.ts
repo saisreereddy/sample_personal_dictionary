@@ -38,7 +38,6 @@ export class FullpageviewComponent implements OnInit {
     console.log(myWord);
     this.gotHttpService.getDictonaryData(myWord).subscribe(
       data => {
-        this.toastr.success('Good to go!!!', 'Success!');
         this.dictData = data;
         console.log(this.dictData);
         this.results = data.results;
@@ -78,7 +77,6 @@ export class FullpageviewComponent implements OnInit {
       }
     this.gotHttpService.getDictonaryDataSentences(val).subscribe(
       data => {
-        this.toastr.success('Good to go!!!', 'Success!');
         this.dictDataSentences = data;
         console.log(this.dictDataSentences);
         this.dictDataSentencesResults = data.results;
@@ -116,7 +114,7 @@ export class FullpageviewComponent implements OnInit {
       }
     this.gotHttpService.getDictonaryDataSynonyms(val).subscribe(
       data => {
-        this.toastr.success('Good to go!!!', 'Success!');
+       // this.toastr.success('Good to go!!!', 'Success!');
         this.dictDataSynonyms = data;
         console.log(this.dictDataSynonyms);
         this.dictDataSynonymsResults = data.results;
@@ -154,7 +152,7 @@ export class FullpageviewComponent implements OnInit {
             }
           this.gotHttpService.getDictonaryDataAntonyms(val).subscribe(
             data => {
-              this.toastr.success('Good to go!!!', 'Success!');
+          //    this.toastr.success('Good to go!!!', 'Success!');
               this.dictDataAntonyms = data;
               console.log(this.dictDataAntonyms);
               this.dictDataAntonymsResults = data.results;

@@ -1,10 +1,10 @@
-<div class="myDiv">
+<div class="myDiv bg-img2">
 
-<div class="bg-img"></div>
+
   <div *ngFor="let result of results">
-    <div class="col-md-10 col-md-offset-1 border_bottom" style="padding-bottom:2vh;display:inline-block;font-size:18px;text-align:left;font-weight:bold;">Definition of <span style="font-variant-caps:all-petite-caps;">{{result.word}}</span> in English</div>
+    <div class="col-md-10 col-md-offset-1 border_bottom" style="padding-bottom:2vh;display:inline-block;font-size:16px;text-align:left;font-weight:bold;font-weight:bold;font-variant:small-caps">Definition of {{result.word}} in English</div>
   <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-    <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;font-variant-caps:all-petite-caps;">  {{result.word}} </span>
+    <span style="padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;font-variant-caps:all-petite-caps;font-weight:bold;">  {{result.word}} </span>
     </div>
   </div>
 
@@ -12,19 +12,19 @@
     <div *ngFor="let each of result.lexicalEntries">
       
       <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-        <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+        <span style="padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;font-weight:bold;">  {{each.lexicalCategory}} </span>
       </div>
 
 <div *ngFor="let entries of each.entries">
 <div *ngFor="let senses of entries.senses; let rowIndex=index">
     <div *ngIf="senses.definitions">
     <div class="well col-md-10 col-md-offset-1 border_bottom" >
-<span style="color: darkblue;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> def:</span>        <span style="color: black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> {{senses.definitions}} </span>
+<span style="color:green;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;text-transform:capitalize;"> def:</span>        <span style="color: black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;text-transform:capitalize;"> {{senses.definitions}} </span>
       </div>
     </div>
     <div *ngFor="let examples of senses.examples">
         <div class="col-md-10 col-md-offset-1 border_bottom" >
-            <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>        <span style="padding-bottom:2vh;display:inline-block;font-size:18px"> ' {{examples.text}} ' </span>
+            <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;text-transform:capitalize;color:green;"> Phrase:</span>        <span style="padding-bottom:2vh;display:inline-block;font-size:16px"> ' {{examples.text}} ' </span>
           </div>
     </div>
     
@@ -48,11 +48,11 @@
       <div *ngFor="let results of dictDataSentencesResults">
           <div *ngFor="let each of results.lexicalEntries">
           <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-              <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+              <span style="padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
               </div>
               <div *ngFor="let sentences of each.sentences">
                   <div class="col-md-10 col-md-offset-1 border_bottom">
-                      <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>          <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> ' {{sentences.text}} '</span>
+                      <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;text-transform:capitalize;color:green;"> Phrase:</span>          <span style="padding-bottom:2vh;display:inline-block;font-size:16px;"> ' {{sentences.text}} '</span>
                       </div>
                 </div>
       
@@ -74,7 +74,7 @@
         <div *ngFor="let each of results.lexicalEntries">
       
             <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-                <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#f15a24;text-transform:uppercase;letter-spacing:0.8px;">  {{each.lexicalCategory}} </span>
+                <span style="padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color:#f15a24;text-transform:uppercase;letter-spacing:0.8px;">  {{each.lexicalCategory}} </span>
                 </div>
       
       
@@ -87,15 +87,15 @@
       
       
             <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-                    <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>            <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> ' {{examples.text}} '</span>
+                    <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;text-transform:capitalize;color:green;"> Phrase:</span>            <span style="padding-bottom:2vh;display:inline-block;font-size:16px;"> ' {{examples.text}} '</span>
                 </div>
-                <div class="col-md-10 col-md-offset-1" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">SYNONYMS</div>
+                <div class="col-md-10 col-md-offset-1" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">SYNONYMS</div>
       <div *ngFor="let synonyms of senses.synonyms">
       
    
 
           <div class="col-md-10 col-md-offset-1 border_bottom">
-              <span style="padding-bottom:2vh;display:inline-block;font-size:18px;color:darkgreen"> {{synonyms.text}} </span>
+              <span style="padding-bottom:2vh;display:inline-block;font-size:16px;color:darkgreen"> {{synonyms.text}} </span>
               </div>  
            
     
@@ -129,7 +129,7 @@
             <div *ngFor="let each of results.lexicalEntries">
           
                 <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-                    <span style="padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
+                    <span style="padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color: #f15a24;text-transform: uppercase;letter-spacing: 0.8px;">  {{each.lexicalCategory}} </span>
                     </div>
           
           
@@ -142,9 +142,9 @@
           
           
                 <div class="col-md-10 col-md-offset-1 border_bottom" style="border-bottom:1px solid darkgray;">
-                        <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;text-transform:capitalize;"> Phrase:</span>       <span style="padding-bottom:2vh;display:inline-block;font-size:18px;"> ' {{examples.text}} '</span>
+                        <span style="color:black;font-style:italic;font-weight: normal;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;text-transform:capitalize;color:green;"> Phrase:</span>       <span style="padding-bottom:2vh;display:inline-block;font-size:16px;"> ' {{examples.text}} '</span>
                     </div>
-                    <div class="col-md-10 col-md-offset-1" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:18px;font-weight:bold;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">ANTONYMS</div>
+                    <div class="col-md-10 col-md-offset-1" style="text-align:left;padding-bottom:2vh;display:inline-block;font-size:16px;font-weight:normal;color:#656565;text-transform:uppercase;letter-spacing:0.8px;">ANTONYMS</div>
           
           <div *ngFor="let antonyms of senses.antonyms">
           
@@ -153,7 +153,7 @@
           
           
               <div class="col-md-10 col-md-offset-1 border_bottom">
-                  <span style="padding-bottom:2vh;display:inline-block;font-size:18px;color:mediumvioletred;">  {{antonyms.text}} </span>
+                  <span style="padding-bottom:2vh;display:inline-block;font-size:16px;color:mediumvioletred;">  {{antonyms.text}} </span>
                   </div>  
           
         

@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { GotHttpService } from '../got-http-service.service';
 import { FormControl } from '@angular/forms';
 import { Pipe, PipeTransform } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager} from 'ng2-toastr/ng2-toastr';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
@@ -16,7 +16,7 @@ import RateLimiter from 'rxjs-ratelimiter';
   providers: []
 })
 export class HomeComponent implements OnInit {
-  items: Array<any> = []
+  items: Array<any> = [];
   dictData: any;
 name: any;
 results: any;
@@ -90,7 +90,7 @@ queryField: FormControl = new FormControl();
         console.log("some error occured");
         console.log(error.errorMessage);
       }
-    ) : this.toastr.info('Enter atleast three characters!', 'Information!'));
+    ) : this.toastr.clearToast);
 }
 
 methodInsideYourComponent(val) {
@@ -116,6 +116,5 @@ this.router.navigate(['/fullpageview', { fullpageviewword : this.someProperty }]
       //  console.log(this.allData);
       this.router.navigate(['/fullpageview', { fullpageviewword : this.someProperty2 }]);
     // }
-            }
+      }
 }
-
