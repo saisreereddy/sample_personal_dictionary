@@ -40,7 +40,7 @@
    <button type="submit" (click)="methodInsideYourComponent2(textbox.value)"><i class="fa fa-search"></i></button>
 
   </div>
-     <ul class="filter-select">
+     <ul class="filter-select" (clickOutside)="onClickedOutside($event)">
         <li *ngFor="let result of autoDictDataresults" class="filter-select-list" (click)="methodInsideYourComponent2(result.word)"><p class="artist-name">
           {{result.word}}</p></li>
 

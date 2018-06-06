@@ -70,7 +70,7 @@ export class FullpageviewComponent implements OnInit {
     console.log(this.myId);
     this.showMore = !this.showMore;
     if (this.showMore) {
-    $(event.srcElement.children[0]).removeClass( 'glyphicon glyphicon-plus').addClass( 'glyphicon glyphicon-minus');
+      $(event.srcElement.children[0]).removeClass( 'glyphicon glyphicon-plus').addClass( 'glyphicon glyphicon-minus');
     }
     if (!this.showMore) {
       $(event.srcElement.children[0]).removeClass( 'glyphicon glyphicon-minus').addClass( 'glyphicon glyphicon-plus');

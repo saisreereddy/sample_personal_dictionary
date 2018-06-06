@@ -23,6 +23,7 @@ import RateLimiter from 'rxjs-ratelimiter';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {MDBBootstrapModule , CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import 'hammerjs';
+import { ClickOutsideModule } from 'ng4-click-outside';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import 'hammerjs';
     ReactiveFormsModule,
     Ng2CarouselamosModule,
     CarouselModule,
+    ClickOutsideModule,
     WavesModule,
     ToastModule.forRoot(),
     RouterModule.forRoot([

@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewContainerRef} from '@angular/core';
+import { Component, OnInit , ViewContainerRef, ElementRef, HostListener, Input} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { GotHttpService } from '../got-http-service.service';
@@ -9,6 +9,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import RateLimiter from 'rxjs-ratelimiter';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -26,7 +27,14 @@ resultsforms: any[] = [];
 sample: any;
 someProperty: any;
 someProperty2: any;
+isOpen: boolean;
 queryField: FormControl = new FormControl();
+onClickedOutside(e: Event) {
+  console.log('Clicked outside:', e);
+  event.stopPropagation();
+// $(event.srcElement);
+// this.isOpen = !this.isOpen;
+}
   constructor(private _route: ActivatedRoute, private router: Router, private gotHttpService: GotHttpService, private toastr: ToastsManager, vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr);
     this.items = [

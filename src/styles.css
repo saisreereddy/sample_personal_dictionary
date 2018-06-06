@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font: 14px Verdana,Helvetica,Arial,sans-serif !important;
+}
 .api_style{
     text-decoration: none;
     color: crimson;
@@ -10,14 +13,13 @@ padding-right: 50px;
 height: 55px;
 font-variant: small-caps;
 padding: 6px 12px;
-font-size: 14px;
+font-size: 18px;
 line-height: 1.42857143;
 color: #555;
 background-color: #fff;
 background-image: none;
 border: 1px solid #ccc;
 border-right: none;
-border-radius: 4px;
 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
@@ -99,21 +101,20 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
   color: #ccc
 }
 .filter-select {
-  width: 28%;
-  list-style: none;
-  font-size: 1.1em;
-  color: rgb(105, 105, 105);
-  border: 1px solid #ccc;
-  border-top: none;
-  position: absolute;
-  left: 36%;
-  top: calc(72% + 25px);
-  overflow-y: auto;
-  text-align: left;
-  background: #fff;
-  padding-left: 1vw;
-  border-radius: 4px;
-  overflow-x: hidden;
+
+     width: 28.2%;
+    list-style: none;
+    font-size: 1.2em;
+    color: rgb(105, 105, 105);
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 35.9%;
+    top: calc(70% + 25px);
+    overflow-y: auto;
+    text-align: left;
+    background: #fff;
+    padding-left: 1vw;
+    overflow-x: hidden;
 }
 .filter-select-list img {
   margin-right: 30px;
@@ -132,7 +133,7 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-bo
 .filter-select-list {
   cursor: pointer;
   padding: 5px 10px;
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
 }
 .artist-name {
   display: inline-block;
@@ -266,15 +267,16 @@ input[type="submit"] {
 }
 .border_bottom{
 
-  width:80%;
+  width:83%;
   text-align: left;
+  margin-bottom: 2vh;
 }
 .img1_style_main{
 
   height: 11rem;
 }
 .fa{
-  color:darkgreen;
+  color:skyblue;
   font-weight: bold;
 }
  .bg-img{
@@ -290,7 +292,7 @@ input[type="submit"] {
    background-position: center center;
     background-repeat: no-repeat; 
     background-size: cover; 
-  background-image: url("https://media.gettyimages.com/photos/magnifying-glass-on-the-book-picture-id506316468?b=1&k=6&m=506316468&s=612x612&w=0&h=mmOTv7qckaNvY6OCN7HBu7l2fuL9veLc7XNQq26lCgU=");
+  /*background-image: url("https://media.gettyimages.com/photos/magnifying-glass-on-the-book-picture-id506316468?b=1&k=6&m=506316468&s=612x612&w=0&h=mmOTv7qckaNvY6OCN7HBu7l2fuL9veLc7XNQq26lCgU=");*/
 }
 .bg-img2{
   
@@ -305,7 +307,7 @@ input[type="submit"] {
      background-position: center center;
       background-repeat: no-repeat; 
       background-size: cover; 
-    background-image: url("https://previews.123rf.com/images/ciarada/ciarada1302/ciarada130200012/17970238-abstract-distressed-background-in-shades-of-light-green-.jpg");
+    background-image: url("https://www.publicdomainpictures.net/pictures/70000/velka/old-white-background.jpg");
   }
 .myDiv {
   position: relative;
@@ -334,7 +336,8 @@ input[type="submit"] {
 
 
 ::-webkit-scrollbar {
-  width: 18px;
+  width: 6px !important;
+  height: 6px !important;
 }
 
 /* Track */
@@ -345,6 +348,8 @@ input[type="submit"] {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: lightgray; 
+  border: 4px solid transparent;
+  background-clip: content-box;  
 }
 
 /* Handle on hover */
@@ -352,7 +357,7 @@ input[type="submit"] {
   background:lightgray; 
 }
 .navbar-default .navbar-nav>li>a{
-  color: white;
+  color: black;
   font-weight: bold;
   font-variant: small-caps;
 }
@@ -363,18 +368,43 @@ input[type="submit"] {
  border-radius: 4px;
  font-variant: small-caps;
 }
+.navbar-default .navbar-nav>li>a:active{
+  color: black;
+  font-weight: bold;
+  background-color: lightgray;
+  border-radius: 4px;
+  font-variant: small-caps;
+ }
 .navbar-inverse .navbar-nav>li>a{
-  color: white;
+  color: black;
   font-weight: bold;
   font-variant: small-caps;
+  font-size: 18px;
 }
 .navbar-inverse .navbar-nav>li>a:hover{
  color: black;
  font-weight: bold;
- background-color: lightgray;
+ background-color: white;
  border-radius: 4px;
  font-variant: small-caps;
+ font-size: 18px;
 }
+.navbar-inverse .navbar-nav>li>a:active{
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 4px;
+  font-variant: small-caps;
+  font-size: 18px;
+ }
+ .navbar-inverse .navbar-nav>li>a:focus{
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 4px;
+  font-variant: small-caps;
+  font-size: 18px;
+ }
 .navbar-default{
   background-color:transparent;
 }
@@ -413,7 +443,7 @@ div.slide-left {
   overflow:hidden;
 }
 div.slide-left p {
-  animation: slide-left 4s;
+  animation: slide-left 3s;
 }
 
 @keyframes slide-left {
@@ -427,15 +457,43 @@ div.slide-left p {
     width: 100%;
   }
 }
+div.slide-left2  {
+  animation-delay: 20;;
+}
+@keyframes bounceIn {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 .font_animate{
-  color: white;
-  font-weight: bold;
+  color: black;
   font-variant: small-caps;
   font-size: 24px;
 }
 .font_animate2{
-  color: white;
-  font-weight: bold;
+  color: black;
+
   font-variant: small-caps;
   font-size: 22px;
+}
+.display_none{
+  display:none;
+}
+.bg-navbar{
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.2;
+background-image: url("assets/Images/navbar1.jpg");
 }
