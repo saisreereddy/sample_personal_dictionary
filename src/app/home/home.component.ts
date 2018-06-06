@@ -28,6 +28,7 @@ sample: any;
 someProperty: any;
 someProperty2: any;
 isOpen: boolean;
+public imagesUrl;
 queryField: FormControl = new FormControl();
 onClickedOutside(e: Event) {
   console.log('Clicked outside:', e);
@@ -44,6 +45,18 @@ onClickedOutside(e: Event) {
   }
 
   ngOnInit() {
+    this.imagesUrl = [
+      'http://www.graphics99.com/wp-content/uploads/2012/02/the-vacublary-of-the-average-person.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzZdDay4ZD8VvuAkEhK2DYYE5X4GUTwB1WY-x_ZGaOusQOLWM',
+      'https://i.pinimg.com/originals/67/02/aa/6702aae3724fd6dd735f96882dedb2a9.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlzuxsu86FqJ-9UpIv39nHlNQBVm_PBYYD7X6RKdDQYXJYi7qBYQ',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaXTq2ZuW1tv7wZ4c6XcHXMM9bdVbNwKBmvid3gRBxtqxEuV8LiA',
+  'http://tse2.mm.bing.net/th?id=OIP.0VGEZ-ffoe37CZgGlR9M_wHaFl',
+  'https://i.pinimg.com/originals/54/ab/08/54ab087174827adfd17ab31066807e88.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlY2pkmOrpwtDzGL0bTk7ivut_8sdEj7TuT_0ZcUI8P6Bh9t_9',
+  'https://i.pinimg.com/originals/24/58/53/2458537f7a982b8ac600ff2a68548a88.png',
+  'https://i.pinimg.com/originals/0c/a1/0e/0ca10ed68635e24bf1f0cdcd595a264e.jpg'
+  ];
     this.queryField.valueChanges
     .subscribe( result => {
       this.sample = result;

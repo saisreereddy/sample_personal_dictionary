@@ -24,6 +24,7 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {MDBBootstrapModule , CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import 'hammerjs';
 import { ClickOutsideModule } from 'ng4-click-outside';
+import { SliderModule } from 'angular-image-slider';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ClickOutsideModule } from 'ng4-click-outside';
     ReactiveFormsModule,
     Ng2CarouselamosModule,
     CarouselModule,
+    SliderModule,
     ClickOutsideModule,
     WavesModule,
     ToastModule.forRoot(),
